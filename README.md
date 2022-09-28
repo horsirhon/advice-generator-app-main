@@ -18,9 +18,9 @@ Users is able to:
 ![Mobile](Screenshots/mobile.png)
 
 ### Links
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/horsirhon/advice-generator-app-main)
 
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://advice-generator-app-main-vb8a.vercel.app/)
 
 
 ## My process
