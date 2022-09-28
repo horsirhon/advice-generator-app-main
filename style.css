@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-greyish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --font-size: 25px;
+    --font-family: 'Manrope', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: var(--font-family);
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    position: relative;
+    background-color: var(--dark-greyish-blue);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2.5rem 1.2rem;
+    margin-bottom: 15vh;
+}
+.container .id {
+    color: var(--neon-green);
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    
+}
+.container .advice {
+    /* background-color: red; */
+    min-height: 10rem;
+    font-size: var(--font-size);
+    color: var(--light-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: .5rem 0;
+}
+.advice span {
+    animation: pop-up .1s ease-out 0s 1 normal forwards;
+}
+#divider-desktop {
+    display: none;
+}
+#divider-mobile {
+    width: 78vw;
+    margin-bottom: 1.2rem;
+}
+#dice {
+    background-color: var(--neon-green);
+    display: flex;
+    position: absolute;
+    bottom: -1.8rem;
+    padding: 1.2rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+#dice:hover {
+    animation-name: glow;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+}
+
+
+@media (min-width: 500px) {
+    .container {
+        max-width: 29rem;
+    }
+    .container .advice {
+        max-width: 25rem;
+        font-size: calc(var(--font-size) + 3px)
+    }
+    #divider-desktop {
+        display: unset;
+        width: 75vw;
+        max-width: 24rem;
+        margin-bottom: 1.2rem;
+    }
+    #divider-mobile {
+        display: none;
+    }
+}
+
+@keyframes glow {
+    0%{
+        box-shadow: 0px 0px 0px var(--neon-green);
+    }
+    100%{
+        box-shadow: 0px 0px 10px var(--neon-green);
+    }
+}
+@keyframes pop-up {
+    0%{
+        transform: scale(.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
